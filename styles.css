@@ -374,6 +374,20 @@ button[type="submit"]:hover {
 
 /* Mobile screens */
 @media (max-width: 600px) {
+  body {
+    background: linear-gradient(
+      to bottom,
+      var(--color-bg1) 0%,
+      var(--color-bg1) 30%,
+      var(--color-bg1) 30%,
+      var(--color-bg1) 47%,
+      var(--color-bg2) 47%,
+      var(--color-bg2) 70%,
+      var(--color-bg3) 70%,
+      var(--color-bg3) 100%
+    );
+  }
+
   .hero h1 {
     font-size: 2.2rem;
     letter-spacing: 1px;
