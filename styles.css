@@ -29,6 +29,43 @@
   font-display: swap;
 }
 
+/* Fade + slide in from bottom */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered animation delays */
+.hero,
+.funding,
+.support,
+.wishes {
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.hero {
+  animation-delay: 0.2s;
+}
+
+.funding {
+  animation-delay: 0.5s;
+}
+
+.support {
+  animation-delay: 0.8s;
+}
+
+.wishes {
+  animation-delay: 1.1s;
+}
+
 /* === Reset === */
 * {
   margin: 0;
@@ -348,9 +385,28 @@ button[type="submit"]:hover {
     font-size: 1rem;
   }
 
-  .decor-background img,
+  .decor-background .balloon {
+    top: 9rem;
+    left: 5rem;
+  }
+
+  .decor-background .hat {
+    top: 14.5;
+    right: -1rem;
+  }
+
+  .decor-background .plane {
+    top: 33%;
+    right: 35%;
+  }
+
   .decor-memoji .memoji {
-    width: 100px;
+    width: 120px;
+    opacity: 0.9;
+  }
+
+  .decor-background img {
+    width: 90px;
     opacity: 0.2;
   }
 
