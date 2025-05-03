@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>день рождения Полины</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="decor-background">
+      <img src="images/icons/balloons.svg" class="balloon" alt="иконка шара" />
+      <img src="images/icons/party-hat.svg" class="hat" alt="иконка колпака" />
+      <img src="images/icons/star.svg" class="star" alt="иконка звезды" />
+      <img
+        src="images/icons/airplane.svg"
+        class="plane"
+        alt="иконка самолёта" />
+      <img
+        src="images/icons/birthday-cake.svg"
+        class="cake"
+        alt="иконка торта" />
+    </div>
+
+    <div class="decor-memoji">
+      <img src="images/memoji/first.webp" class="memoji first" alt="memoji 1" />
+      <img
+        src="images/memoji/second.webp"
+        class="memoji second"
+        alt="memoji 2" />
+      <img src="images/memoji/third.webp" class="memoji third" alt="memoji 3" />
+      <img
+        src="images/memoji/fourth.webp"
+        class="memoji fourth"
+        alt="memoji 4" />
+      <img src="images/memoji/fifth.webp" class="memoji fifth" alt="memoji 5" />
+      <img src="images/memoji/sixth.webp" class="memoji sixth" alt="memoji 6" />
+    </div>
+
+    <main class="container">
+      <header class="hero">
+        <h1>День рождения Полины</h1>
+        <p>
+          я — полина! в этом году я хочу сделать что-то особенное — отправиться
+          в путешествие мечты
+        </p>
+        <p>вместо подарков, я буду очень благодарна за любую поддержку</p>
+      </header>
+
+      <section class="funding">
+        <h2>прогресс сбора на поездку</h2>
+        <div class="progress-bar">
+          <div class="progress-fill"></div>
+        </div>
+        <p>€320 из €1000 собрано</p>
+      </section>
+
+      <section class="support">
+        <h2>хочешь помочь?</h2>
+        <p>нажми на кнопку ниже, чтобы перевести подарок напрямую:</p>
+        <div class="buttons">
+          <a href="#" class="btn">T-Bank</a>
+          <a href="#" class="btn">usdt (trc20)</a>
+        </div>
+      </section>
+
+      <section class="wishes">
+        <h2>оставь мне пожелание</h2>
+        <form name="wish-form" method="POST" data-netlify="true" netlify>
+          <input type="text" name="name" placeholder="твое имя" required />
+          <textarea
+            name="wish"
+            placeholder="твоё тёплое пожелание"
+            required></textarea>
+          <button type="submit">отправить</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,314 @@
+/* === Color Palette === */
+:root {
+  --color-bg1: #ff7c00;
+  --color-bg2: #ef5db7;
+  --color-bg3: #f8b30c;
+  --color-pink: #ffd4b3;
+  --color-orange: #ffae42;
+  --color-green: #8de969;
+  --color-purple: #dab6fc;
+  --color-blue: #add8e6;
+  --color-yellow: #fff176;
+
+  --progress-start: var(--color-pink);
+  --progress-end: #f1f3f5;
+  --btn-bg: #f1f3f5;
+  --btn-hover: #ffe6cc;
+  --form-border: #f1f3f5;
+  --submit-btn: #f1f3f5;
+  --submit-hover: #fff0d9;
+  --text-color: #2d2d2d;
+}
+
+@font-face {
+  font-family: "Bups Bups";
+  src: url("fonts/bups-bups.woff2") format("woff2"),
+    url("fonts/bups-bups.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* === Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: lowercase;
+}
+
+body {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background: linear-gradient(
+    to bottom,
+    var(--color-bg1) 0%,
+    var(--color-bg1) 30%,
+    var(--color-bg1) 30%,
+    var(--color-bg1) 47%,
+    var(--color-bg2) 47%,
+    var(--color-bg2) 66%,
+    var(--color-bg3) 66%,
+    var(--color-bg3) 100%
+  );
+  color: #2d2d2d;
+  position: relative;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* === Decorative Background Icons (scattered layout) === */
+
+.decor-background::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: none;
+  z-index: -1;
+}
+
+.decor-background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.decor-background img {
+  position: absolute;
+  width: 120px;
+  opacity: 0.15;
+  filter: brightness(0) saturate(100%) invert(99%) sepia(1%) saturate(2000%)
+    hue-rotate(315deg) brightness(1.1);
+}
+
+.decor-background .balloon {
+  top: 14rem;
+  left: 12rem;
+}
+.decor-background .hat {
+  top: 15.5rem;
+  right: 3rem;
+}
+.decor-background .star {
+  top: 53%;
+  left: 21%;
+}
+.decor-background .plane {
+  top: 28%;
+  right: 17%;
+}
+.decor-background .cake {
+  bottom: 12rem;
+  left: 70%;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-50px, -50px);
+  }
+}
+
+/* === Container === */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+/* === Hero Section === */
+
+.hero h1 {
+  font-size: 4.2rem;
+  font-family: "Bups Bups";
+  letter-spacing: 3px;
+  font-weight: lighter;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: white;
+}
+
+.decor-memoji {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.decor-memoji .memoji {
+  position: absolute;
+  width: 250px;
+  opacity: 0.9;
+  filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.1));
+  z-index: -1;
+}
+
+/* Repositioned for large size */
+.memoji.first {
+  top: 2%;
+  left: 0%;
+}
+.memoji.second {
+  top: 4%;
+  right: -20px;
+}
+.memoji.third {
+  top: 30%;
+  left: -30px;
+}
+.memoji.fourth {
+  top: 42%;
+  right: -20px;
+}
+.memoji.fifth {
+  bottom: 5%;
+  left: 5%;
+}
+.memoji.sixth {
+  bottom: -5%;
+  right: 5%;
+}
+
+.memoji {
+  animation: floaty 6s ease-in-out infinite;
+}
+
+@keyframes floaty {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* === Progress Section === */
+.funding {
+  margin-top: 3rem;
+}
+
+.funding h2 {
+  color: white;
+}
+
+.progress-bar {
+  background: var(--color-pink);
+  border: 2px solid white;
+  border-radius: 30px;
+  height: 25px;
+  margin: 1rem auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+.progress-fill {
+  background: linear-gradient(
+    to right,
+    var(--progress-start),
+    var(--progress-end)
+  );
+  width: 32%;
+  height: 100%;
+  transition: width 0.5s ease-in-out;
+}
+
+.funding p {
+  color: white;
+}
+
+/* === Support Buttons === */
+.support {
+  margin-top: 3rem;
+}
+
+.support h2 {
+  color: white;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.btn {
+  background: var(--btn-bg);
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  border: none;
+}
+
+.btn:hover {
+  background: var(--btn-hover);
+}
+
+/* === Wishes Form === */
+.wishes {
+  margin-top: 3rem;
+}
+
+.wishes h2 {
+  color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+input,
+textarea {
+  padding: 0.8rem;
+  border: 2px solid var(--form-border);
+  border-radius: 10px;
+  font-size: 1rem;
+  width: 100%;
+  background: white;
+  color: var(--text-color);
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+button[type="submit"] {
+  background: var(--submit-btn);
+  border: none;
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  color: var(--text-color);
+}
+
+button[type="submit"]:hover {
+  background: var(--submit-hover);
+}
