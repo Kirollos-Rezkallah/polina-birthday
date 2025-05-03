@@ -312,3 +312,70 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background: var(--submit-hover);
 }
+
+/* === Responsive Adjustments === */
+
+/* Tablets & below */
+@media (max-width: 992px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .memoji {
+    width: 180px;
+  }
+
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .container {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+  }
+
+  .hero p,
+  .funding p,
+  .support p {
+    font-size: 1rem;
+  }
+
+  .decor-background img,
+  .decor-memoji .memoji {
+    width: 100px;
+    opacity: 0.2;
+  }
+
+  .progress-bar {
+    height: 20px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  input,
+  textarea {
+    font-size: 0.95rem;
+    padding: 0.6rem;
+  }
+
+  button[type="submit"] {
+    font-size: 1rem;
+    padding: 0.6rem;
+  }
+}
