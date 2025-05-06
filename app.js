@@ -58,3 +58,23 @@ document.getElementById("copy-trc20").addEventListener("click", function (e) {
     setTimeout(() => (msg.style.opacity = "0"), 2000);
   });
 });
+
+// Response of form after submission
+const wishForm = document.getElementById("wish-form");
+
+wishForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const formData = new FormData(wishForm);
+
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString(),
+  })
+    .then(() => {
+      alert("спасибо за твоё пожелание! мне очень приятно :)");
+      wishForm.reset();
+    })
+    .catch(() => alert("упс! что-то пошло не так... попробуй ещё раз позже."));
+});

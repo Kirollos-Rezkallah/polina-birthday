@@ -80,7 +80,13 @@
           мне будет очень приятно прочитать что-то и от тебя — твои слова греют
           не хуже солнечных стран :)
         </p>
-        <form name="wish-form" method="POST" data-netlify="true" netlify>
+        <form
+          id="wish-form"
+          name="wish-form"
+          method="POST"
+          data-netlify="true"
+          netlify>
+          <input type="hidden" name="form-name" value="wish-form" />
           <input type="text" name="name" placeholder="имя" required />
           <textarea
             name="wish"
