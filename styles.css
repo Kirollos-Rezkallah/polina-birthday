@@ -75,7 +75,7 @@
 }
 
 body {
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: "Comic Neue", cursive, sans-serif;
   background: linear-gradient(
     to bottom,
     var(--color-bg1) 0%,
