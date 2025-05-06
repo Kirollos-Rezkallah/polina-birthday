@@ -89,7 +89,7 @@ alipayBtn.addEventListener("click", function (e) {
 });
 
 qrPopup.addEventListener("click", (e) => {
-  e.stopPropagation();
+  e.stopPropagation(); // don't close when clicking on the popup itself
 });
 
 document.addEventListener("click", function (e) {

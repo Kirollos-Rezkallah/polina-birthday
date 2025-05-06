@@ -314,21 +314,20 @@ body {
 
 #qr-popup {
   position: fixed;
-  top: 50%;
+  top: -180%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: white;
-  border: 2px solid var(--color-orange);
   padding: 1rem;
   border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-  z-index: 2000;
-  display: none;
+  border: 3px solid var(--color-orange);
+  z-index: 3000;
   animation: fadeIn 0.3s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 #qr-popup img {
-  max-width: 200px;
+  max-width: 240px;
   height: auto;
 }
 
@@ -497,6 +496,10 @@ button[type="submit"]:hover {
   .btn {
     width: 100%;
     font-size: 1rem;
+  }
+
+  #qr-popup {
+    top: -50%;
   }
 
   input,
