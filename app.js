@@ -1,7 +1,7 @@
 async function updateDonationProgress() {
   try {
     const proxyUrl = "https://api.allorigins.win/get?url=";
-    const targetUrl = "https://www.tbank.ru/cf/7FlUOHJdrU7";
+    const targetUrl = "https://www.tbank.ru/cf/8hvmwfBM9BF";
     const response = await fetch(proxyUrl + encodeURIComponent(targetUrl));
 
     if (!response.ok) throw new Error("Ошибка загрузки страницы");
@@ -22,7 +22,7 @@ async function updateDonationProgress() {
 
     if (isNaN(amount)) throw new Error("Ошибка при разборе суммы");
 
-    const target = 50000;
+    const target = 200000;
     const percentage = Math.min(Math.round((amount / target) * 100), 100);
 
     // Update the width of the progress bar
@@ -77,4 +77,23 @@ wishForm.addEventListener("submit", function (e) {
       wishForm.reset();
     })
     .catch(() => alert("упс! что-то пошло не так... попробуй ещё раз позже."));
+});
+
+// Alipay qr code pop up
+const qrPopup = document.getElementById("qr-popup");
+const alipayBtn = document.getElementById("alipay-btn");
+
+alipayBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  qrPopup.classList.toggle("qr-hidden");
+});
+
+qrPopup.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+document.addEventListener("click", function (e) {
+  if (!qrPopup.contains(e.target) && !alipayBtn.contains(e.target)) {
+    qrPopup.classList.add("qr-hidden");
+  }
 });

@@ -312,6 +312,41 @@ body {
   background: var(--btn-hover);
 }
 
+#qr-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border: 2px solid var(--color-orange);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  z-index: 2000;
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+#qr-popup img {
+  max-width: 200px;
+  height: auto;
+}
+
+.qr-hidden {
+  display: none !important;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
 .copy-toast {
   position: fixed;
   top: -2.8rem;
@@ -406,8 +441,8 @@ button[type="submit"]:hover {
       var(--color-bg1) 0%,
       var(--color-bg1) 30%,
       var(--color-bg1) 30%,
-      var(--color-bg1) 47%,
-      var(--color-bg2) 47%,
+      var(--color-bg1) 45%,
+      var(--color-bg2) 45%,
       var(--color-bg2) 67%,
       var(--color-bg3) 67%,
       var(--color-bg3) 100%
