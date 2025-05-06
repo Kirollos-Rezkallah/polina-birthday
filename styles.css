@@ -81,16 +81,22 @@ body {
     var(--color-bg1) 0%,
     var(--color-bg1) 30%,
     var(--color-bg1) 30%,
-    var(--color-bg1) 47%,
-    var(--color-bg2) 47%,
-    var(--color-bg2) 66%,
-    var(--color-bg3) 66%,
+    var(--color-bg1) 49%,
+    var(--color-bg2) 49%,
+    var(--color-bg2) 65%,
+    var(--color-bg3) 65%,
     var(--color-bg3) 100%
   );
   color: #2d2d2d;
   position: relative;
   overflow-x: hidden;
   line-height: 1.6;
+}
+
+*,
+*::before,
+*::after {
+  font-family: inherit;
 }
 
 /* === Decorative Background Icons (scattered layout) === */
@@ -303,6 +309,22 @@ body {
   background: var(--btn-hover);
 }
 
+.copy-toast {
+  position: fixed;
+  top: -2.8rem;
+  right: 21.5rem;
+  background-color: #2d2d2d;
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
 /* === Wishes Form === */
 .wishes {
   margin-top: 3rem;
@@ -310,6 +332,7 @@ body {
 
 .wishes h2 {
   color: white;
+  font-size: 1.4rem;
 }
 
 form {
@@ -382,8 +405,8 @@ button[type="submit"]:hover {
       var(--color-bg1) 30%,
       var(--color-bg1) 47%,
       var(--color-bg2) 47%,
-      var(--color-bg2) 70%,
-      var(--color-bg3) 70%,
+      var(--color-bg2) 67%,
+      var(--color-bg3) 67%,
       var(--color-bg3) 100%
     );
   }
@@ -439,6 +462,12 @@ button[type="submit"]:hover {
   }
 
   input,
+  textarea,
+  button {
+    font-family: inherit;
+  }
+
+  input,
   textarea {
     font-size: 0.95rem;
     padding: 0.6rem;
@@ -447,5 +476,10 @@ button[type="submit"]:hover {
   button[type="submit"] {
     font-size: 1rem;
     padding: 0.6rem;
+  }
+
+  .copy-toast {
+    top: -2.8rem;
+    right: 6.5rem;
   }
 }

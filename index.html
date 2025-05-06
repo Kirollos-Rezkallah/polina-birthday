@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>день рождения Полины</title>
+    <title>день рождения Полинки</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/webp" href="images/memoji/first.webp" />
   </head>
   <body>
     <div class="decor-background">
@@ -40,40 +41,56 @@
       <header class="hero">
         <h1>День рождения Полины</h1>
         <p>
-          я — полина! в этом году я хочу сделать что-то особенное — отправиться
-          в путешествие мечты
+          привет, мой дорогой друг! составить wish-list на этот день рождения
+          оказалось не простой задачей, как будто у меня уже есть абсолютно всё.
+          поэтому, было принято решение отправиться в кругосветное путешествие
+          мечты. вместо подарков, я буду бесконечно благодарна за любую
+          поддержку этой авантюры — даже самая маленькая помощь станет огромным
+          шагом к мечте.
         </p>
-        <p>вместо подарков, я буду очень благодарна за любую поддержку</p>
       </header>
 
       <section class="funding">
-        <h2>прогресс сбора на поездку</h2>
+        <h2>до мечты...</h2>
         <div class="progress-bar">
           <div class="progress-fill"></div>
         </div>
-        <p>€320 из €1000 собрано</p>
+        <p>320₽ из 50000₽ собрано</p>
       </section>
 
       <section class="support">
-        <h2>хочешь помочь?</h2>
+        <h2>хочешь поддержать меня?</h2>
         <p>нажми на кнопку ниже, чтобы перевести подарок напрямую:</p>
         <div class="buttons">
-          <a href="#" class="btn">T-Bank</a>
-          <a href="#" class="btn">usdt (trc20)</a>
+          <a
+            href="https://www.tbank.ru/cf/7FlUOHJdrU7"
+            class="btn"
+            target="_blank"
+            rel="noopener noreferrer"
+            >T-Bank</a
+          >
+          <a href="#" class="btn" id="copy-trc20">usdt (trc20)</a>
         </div>
+        <div id="copy-message" class="copy-toast">код скопирован!</div>
       </section>
 
       <section class="wishes">
-        <h2>оставь мне пожелание</h2>
+        <h2>люблю открытки и особенно читать пожелания из них</h2>
+        <p>
+          мне будет очень приятно прочитать что-то и от тебя — твои слова греют
+          не хуже солнечных стран :)
+        </p>
         <form name="wish-form" method="POST" data-netlify="true" netlify>
-          <input type="text" name="name" placeholder="твое имя" required />
+          <input type="text" name="name" placeholder="имя" required />
           <textarea
             name="wish"
             placeholder="твоё тёплое пожелание"
             required></textarea>
-          <button type="submit">отправить</button>
+          <button type="submit">пуньк</button>
         </form>
       </section>
     </main>
+
+    <script src="app.js"></script>
   </body>
 </html>
